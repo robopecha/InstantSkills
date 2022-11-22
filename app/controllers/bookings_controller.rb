@@ -14,8 +14,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.skill = Skill.find(params[:skill_id])
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to skill_path(@booking.skill)
     else
       render :new, status: :unprocessable_entity
     end
@@ -30,6 +32,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:user_id, :skill_id)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
