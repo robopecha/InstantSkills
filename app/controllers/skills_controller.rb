@@ -11,6 +11,7 @@ class SkillsController < ApplicationController
 
   def create
     @skill = Skill.new(skill_params)
+    @skill.user = current_user
     if @skill.save
       redirect_to skill_path(@skill)
     else
@@ -35,6 +36,10 @@ class SkillsController < ApplicationController
   def destroy
     @skill.destroy
     redirect_to skills_path, status: :see_other
+  end
+
+  def dashboard
+    @skills = Skill.where(user_id: current_user)
   end
 
   private
