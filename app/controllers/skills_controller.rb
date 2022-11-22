@@ -2,7 +2,7 @@ class SkillsController < ApplicationController
   before_action :set_skill, only: %i[show edit update destroy]
 
   def index
-    @skills = Skill.all
+    @skills = Skill.where("user_id != ?", current_user.id)
   end
 
   def new
