@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :skills do
+    collection do
+      get :dashboard
+    end
     resources :bookings, only: %i[new create]
   end
   resources :bookings, only: %i[index show destroy]
