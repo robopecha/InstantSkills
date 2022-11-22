@@ -4,3 +4,7 @@
 <p><%= @skill.price %></p>
 
 <%= link_to "Book this skill", new_booking_path %>
+
+<%= link_to "Edit this skill", edit_skill_path %>
+
+<%= link_to "Delete this skill", skills_path, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %>
