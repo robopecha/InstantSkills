@@ -19,18 +19,22 @@ class SkillsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   end
 
   def edit
+    @skill = Skill.find(params[:id])
   end
 
   def update
-    @skill = Skill.update(skill_params)
+    @skill = Skill.find(params[:id])
+    @skill.update(skill_params)
+    redirect_to skill_path(@skill)
   end
 
   def destroy
     @skill.destroy
-    redirect_to skills_path
+    redirect_to skills_path, status: :see_other
   end
 
   private
