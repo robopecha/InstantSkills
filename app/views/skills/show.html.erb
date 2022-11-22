@@ -1,3 +1,11 @@
-<h1>Skills#show</h1>
-<p>Find me in app/views/skills/show.html.erb</p>
+<h3><%= @skill.name %></h3>
+<p><%= @skill.description %></p>
+<p><%= @skill.level %></p>
+<p><%= @skill.price %></p>
+
+<%= link_to "Edit this skill", edit_skill_path %>
+
+<%= link_to "Delete this skill", skills_path, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %>
+
 <%= render "bookings/form" %>
+
