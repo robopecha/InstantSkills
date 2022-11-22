@@ -4,4 +4,10 @@
       <%= link_to booking.skill.name, booking_path(booking) %>: <%= booking.skill.description %>, booked by: <%= booking.user.username %>
     </li>
   </ul>
+  <% end %>
+
+  <% @bookings.each do |booking| %>
+   <h4><strong><%= booking.user.email%></strong></h4>
+   <h4><strong><%= booking.skill.description%></strong></h4>
+
 <% end %>
