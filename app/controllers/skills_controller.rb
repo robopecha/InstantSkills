@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-  before_action :set_skill, only: [:show, :edit, :update, :destroy]
+  before_action :set_skill, only: %i[show edit update destroy]
 
   def index
     @skills = Skill.all
@@ -12,9 +12,9 @@ class SkillsController < ApplicationController
   def create
     @skill = Skill.new(skill_params)
     if @skill.save
-      render skill_path(@skill)
+      redirect_to skill_path(@skill)
     else
-      render :new, status: :unprocessed_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
