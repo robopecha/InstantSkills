@@ -20,8 +20,12 @@ skills = [{name: "Coding", description: "Knowledge in python,javaskript and sql"
         {name: "How to Light a Fire", description: "Being able to light a fire will always be a good skill to know", price: 10, level: 2},
         {name: "How to Manage Personal Finance", description: "Managing personal finances is something hardly anyone is taught, either at school or by parents.", price: 15, level: 3}]
 
+puts "Creating skills and users"
+
  skills.each do |skill|
   skill = Skill.new(name: skill[:name], description: skill[:description], price: skill[:price], level: skill[:level])
   skill.user = User.create(email: Faker::Internet.email, username: Faker::Internet.user, password: Faker::Internet.password)
   skill.save
  end
+ 
+ puts "Creation complete"
