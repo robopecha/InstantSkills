@@ -27,5 +27,5 @@ puts "Creating skills and users"
   skill.user = User.create(email: Faker::Internet.email, username: Faker::Internet.user, password: Faker::Internet.password)
   skill.save
  end
- 
+
  puts "Creation complete"
