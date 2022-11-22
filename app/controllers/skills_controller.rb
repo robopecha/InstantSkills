@@ -38,6 +38,10 @@ class SkillsController < ApplicationController
     redirect_to skills_path, status: :see_other
   end
 
+  def dashboard
+    @skills = Skill.where(user_id: current_user)
+  end
+
   private
 
   def skill_params
