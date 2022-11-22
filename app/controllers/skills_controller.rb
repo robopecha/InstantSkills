@@ -5,10 +5,6 @@ class SkillsController < ApplicationController
     @skills = Skill.all
   end
 
-  def show
-    @skill = Skill.find(params[:id])
-  end
-
   def new
     @skill = Skill.new
   end
@@ -20,6 +16,10 @@ class SkillsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @booking = Booking.new
   end
 
   def edit
