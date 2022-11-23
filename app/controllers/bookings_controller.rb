@@ -17,7 +17,8 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.skill = Skill.find(params[:skill_id])
     if @booking.save
-      redirect_to skill_path(@booking.skill)
+      # redirect_to skill_path(@booking.skill)
+      redirect_to dashboard_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -26,7 +27,8 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to bookings_path
+    # redirect_to bookings_path
+    redirect_to dashboard_path
   end
 
   private
