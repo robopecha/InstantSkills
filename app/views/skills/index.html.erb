@@ -4,16 +4,20 @@
       <% @skills.each do |skill| %>
           <a href="../skills/<%= skill.id%>" >
           <div class="card-trip">
+
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
           <div class="card-trip-infos">
             <div>
               <h2><%= "#{skill.name}" %></h2>
               <p><%= "Level #{skill.level}" %></p>
+
             </div>
             <h2 class="card-trip-pricing"><%= "#{skill.price}" %></h2>
           </div>
+
           </div>
           </a>
       <% end %>
+
   </div>
 </div>
