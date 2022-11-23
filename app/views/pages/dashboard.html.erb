@@ -1,27 +1,45 @@
-<h1>My skills</h1>
-<% @skills.each do |skill| %>
-  <%= skill.name %>
-  <%= skill.description %>
-  <%= skill.price %>
-  <%= skill.level %>
-  <%= link_to "Edit my skill", edit_skill_path(skill) %>
-  <%= link_to "Delete this skill", skill_path(skill), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{skill.name} from your skills?"} %>
-<% end %>
+<div class="container my-5">
+  <h2 class="mt-5">My skills</h2>
+  <a class="btn btn-ghost mt-2 mb-4" href="skills/new">Add a new skill</a>
+  <div class="row row-cols-3 row-cols-md-2 g-4">
+    <% @skills.each do |skill| %>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> <%= skill.name %></h5>
+            <p class="card-text"><%= skill.description %></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Level: <%= skill.level %></li>
+            <li class="list-group-item">Price: <%= skill.price %></li>
+          </ul>
+          <div class="card-body">
+            <%= link_to "Edit my skill", edit_skill_path(skill), class: "card-link" %>
+            <%= link_to "Delete this skill", skill_path(skill), class: "card-link", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{skill.name} from your skills?"} %>
+          </div>
+        </div>
+      </div>
 
-<a class="btn btn-ghost" href="skills/new">Add a new skill</a>
+    <% end %>
+  </div>
 
 
-<% @bookings.each do |booking| %>
-  <ul>
-    <li>
-      <%= link_to booking.skill.name, booking_path(booking) %>: <%= booking.skill.description %>, booked by: <%= booking.user.username %>
 
-    </li>
-  </ul>
-  <% end %>
-
+  <h2 class="mt-5 mb-3">My bookings</h2>
   <% @bookings.each do |booking| %>
-   <h4><strong><%= booking.user.email%></strong></h4>
-   <h4><strong><%= booking.skill.description%></strong></h4>
-   <%= link_to "Delete booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this booking from your skills?"} %>
-<% end %>
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Booked from <%= booking.start_date.to_formatted_s(:short) %></div>
+      <div class="card-body">
+        <h5 class="card-title"> <%= booking.skill.name %></h5>
+        <p class="card-text"> <%= booking.skill.description %></p>
+        <%= link_to "Delete booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this booking from your skills?"} %>
+      </div>
+    </div>
+   <% end %>
+
+
+
+
+
+</div>
