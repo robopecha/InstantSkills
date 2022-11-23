@@ -22,7 +22,7 @@
 <% @skills.each do |skill| %>
     <a href="../skills/<%= skill.id%>" >
     <div class="card-trip">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <img src=<%= skill.img_url%> />
     <div class="card-trip-infos">
       <div>
         <h2><%= "#{skill.name}" %></h2>
