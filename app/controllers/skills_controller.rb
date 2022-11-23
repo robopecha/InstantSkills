@@ -13,7 +13,8 @@ class SkillsController < ApplicationController
     @skill = Skill.new(skill_params)
     @skill.user = current_user
     if @skill.save
-      redirect_to skill_path(@skill)
+      # redirect_to skill_path(@skill)
+      redirect_to dashboard_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -30,12 +31,14 @@ class SkillsController < ApplicationController
   def update
     @skill = Skill.find(params[:id])
     @skill.update(skill_params)
-    redirect_to skill_path(@skill)
+    # redirect_to skill_path(@skill)
+    redirect_to dashboard_path
   end
 
   def destroy
     @skill.destroy
-    redirect_to skills_path, status: :see_other
+    # redirect_to skills_path, status: :see_other
+    redirect_to dashboard_path
   end
 
   private
