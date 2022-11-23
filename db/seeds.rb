@@ -69,7 +69,18 @@ skills = [{name: "Coding",
            description: "Managing personal finances is something hardly anyone is taught, either at school or by parents.",
            price: 15,
            level: 3,
-           img_url: "https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2022/02/2130x1130-01-01-1-min.png"}]
+           img_url: "https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2022/02/2130x1130-01-01-1-min.png"},
+          {name: "Karate",
+            description: "Being able to karate like a black belt",
+            price: 10,
+            level: 5,
+            img_url: "https://hensel.eu/wp-content/uploads/2019/05/patrick_urban_01.jpg"},
+          {name: "Speaking Vietnamese",
+            description: "Enables you to speak Vietnamese fluently",
+            price: 10,
+            level: 4,
+            img_url: "https://media.istockphoto.com/id/495632233/photo/vietnamese-flag-close-up.jpg?s=612x612&w=0&k=20&c=8U8L00dBUFQCtdD0j6w_FIV7TEm8bScitazug7OUmfE="}
+          ]
 
 puts "Creating skills and users"
 
