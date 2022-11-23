@@ -8,9 +8,6 @@ Rails.application.routes.draw do
 
   get "/dashboard", to: "pages#dashboard"
   resources :skills do
-    collection do
-      get :dashboard
-    end
     resources :bookings, only: %i[new create]
   end
   resources :bookings, only: %i[index show destroy]
