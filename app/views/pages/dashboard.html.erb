@@ -1,3 +1,14 @@
+<h1>My skills</h1>
+<% @skills.each do |skill| %>
+  <%= skill.name %>
+  <%= skill.description %>
+  <%= skill.price %>
+  <%= skill.level %>
+  <%= link_to "Edit my skill", edit_skill_path(skill) %>
+  <%= link_to "Delete this skill", skill_path, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{skill.name} from your skills?"} %>
+<% end %>
+
+
 <% @bookings.each do |booking| %>
   <ul>
     <li>
