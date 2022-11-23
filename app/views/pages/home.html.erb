@@ -1,7 +1,7 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: url(<%= asset_path('banner.png') %>);">
   <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <h1>The skills you need - instantly</h1>
+    <p>Change your life and use the skills that somebody else does not need.</p>
   </div>
 </div>
 
@@ -19,12 +19,12 @@
 <div class="container my-5">
 <div class="cards">
 <% @skills.each do |skill| %>
-    <a href="../skills/<%= skill.id%>" >
+    <a href="../skills/<%= skill.id%>" class='properlink'>
     <div class="card-trip">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
     <div class="card-trip-infos">
       <div>
-        <h2><%= "#{skill.name}" %></h2>
+        <h2 class='myclass'><%= "#{skill.name}" %></h2>
         <p><%= "Level #{skill.level}" %></p>
       </div>
       <h2 class="card-trip-pricing"><%= "#{skill.price}" %></h2>
