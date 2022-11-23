@@ -1,6 +1,8 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  justify-content: center;
   background: white;
+  display: flex;
+  position: relative;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,6 +16,10 @@
 .display-6 {
   text-transform: uppercase;
   font-weight: bold;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  right: 39%;
 }
 
 .navbar-nav {
