@@ -5,7 +5,7 @@
     <% @skills.each do |skill| %>
       <div class="col">
         <div class="card" style="width: 18rem;">
-          <img src="<%=skill.img_url%>" class="card-img-top" alt="...">
+          <img src="<%= cl_image_path(skill.photo.key) %>" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"> <%= skill.name %></h5>
             <p class="card-text"><%= skill.description %></p>

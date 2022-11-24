@@ -21,7 +21,7 @@
 <% @skills.each do |skill| %>
     <a href="../skills/<%= skill.id%>" class='cardlink'>
     <div class="card-trip">
-    <img src=<%= cl_image_tag photo.key %> />
+    <img src=<%= skill.img_url ? skill.img_url : cl_image_path(skill.photo.key) %> />
     <div class="card-trip-infos">
       <div>
         <h2 class='myclass'><%= "#{skill.name}" %></h2>
