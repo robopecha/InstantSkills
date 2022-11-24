@@ -3,7 +3,7 @@
 
   <div class="cards  mt-5">
       <% @skills.each do |skill| %>
-          <a href="../skills/<%= skill.id%>" class='properlink'>
+          <a href="../skills/<%= skill.id%>" class='cardlink'>
             <div class="card-trip">
               <img src=<%= skill.img_url%> />
               <div class="card-trip-infos">
@@ -11,7 +11,7 @@
                     <h2><%= "#{skill.name}" %></h2>
                     <p><%= "Level #{skill.level}" %></p>
                   </div>
-                  <h2 class="card-trip-pricing"><%= "#{skill.price}" %> € </h2>
+                  <h2 class="card-trip-pricing"><%= "#{skill.price}" %> €</h2>
               </div>
             </div>
           </a>
