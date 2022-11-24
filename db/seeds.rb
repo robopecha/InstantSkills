@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "Delete all skills and user"
+
+Skill.destroy_all
+User.destroy_all
+
 skills = [{name: "Coding",
            description: "Basic knowledge in Python, Javaskript and SQL",
            price: 25,
