@@ -1,10 +1,9 @@
 
-<div id="large-header" class="banner vh-75" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');">
-  <canvas id="demo-canvas"></canvas>
-  <div class="container">
-
-    <h1>The skills you need - instantly</h1>
-    <p>Change your life and use the skills that somebody else does not need.</p>
+<div class="content">
+  <div id="large-header" class="large-header">
+    <canvas id="demo-canvas"></canvas>
+    <h1 class="main-title1">All the skills you need ...</h1>
+    <h1 class="main-title2">instantly!</h1>
     <%= form_with url: skills_path, method: :get, class: "search-box-home" do %>
       <%= text_field_tag :query,
         params[:query],
