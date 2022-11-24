@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Delete all skills and user"
 
+Booking.delete_all
 Skill.destroy_all
 User.destroy_all
 
@@ -74,7 +75,7 @@ skills = [{name: "Coding",
            description: "Managing personal finances is something hardly anyone is taught, either at school or by parents.",
            price: 15,
            level: 3,
-           img_url: "https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2022/02/2130x1130-01-01-1-min.png"},
+           img_url: "https://execed.esmt.berlin/sites/execed/files/styles/original/public/2021-08/Finance.JPG?itok=I7rSmMEe"},
           {name: "Karate",
             description: "Being able to karate like a black belt",
             price: 10,

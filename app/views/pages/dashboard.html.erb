@@ -12,11 +12,11 @@
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Level: <%= skill.level %></li>
-            <li class="list-group-item">Price: <%= skill.price %></li>
+            <li class="list-group-item">Price: <%= skill.price %> €</li>
           </ul>
           <div class="card-body">
-            <%= link_to "Edit my skill", edit_skill_path(skill), class: "card-link" %>
-            <%= link_to "Delete this skill", skill_path(skill), class: "card-link", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{skill.name} from your skills?"} %>
+            <%= link_to "Edit my skill", edit_skill_path(skill), class: "card-link properlink" %>
+            <%= link_to "Delete this skill", skill_path(skill), class: "card-link properlink", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{skill.name} from your skills?"} %>
           </div>
         </div>
       </div>
@@ -35,7 +35,9 @@
           <h5 class="card-title"> <strong><%= booking.skill.name %></strong></h5>
           <p class="card-text"> <%= booking.skill.description %></p>
           <p class="card-text"> Total price: <%= (booking.end_date - booking.start_date)/(60*60*24).to_i * booking.skill.price %> €</p>
-          <%= link_to "Delete booking", booking_path(booking), class: "text-white", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this booking from your skills?"} %>
+
+          <%= link_to "Delete booking", booking_path(booking), class: "text-white properlink", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this booking from your skills?"} %>
+
         </div>
       </div>
     </div>
