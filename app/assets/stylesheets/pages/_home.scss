@@ -1,1 +1,22 @@
-// Specific CSS for your home-page
+#large-header, #demo-canvas {
+  position: relative;
+  height: calc(100vh - 50px) !important;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.canvas-header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+
+  h1 {
+    color: red;
+  }
+
+  p {
+    color: blue;
+  }
+}
