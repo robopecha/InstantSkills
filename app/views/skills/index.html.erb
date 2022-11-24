@@ -1,7 +1,23 @@
 <div class="container mt-5">
-<h3 class="mt-5">All skills</h3>
+  <div>
+    <% if params[:query].present? %>
+      <h3 class="mt-5">Your selected skills</h3>
+    <% else %>
+      <h3 class="mt-5">All skills</h3>
+    <% end %>
+    <%= form_with url: skills_path, method: :get, class: "search-box-index" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Find a skill"
+      %>
+      <button class="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
+    <% end %>
+  </div>
 
-  <div class="cards  mt-5">
+  <div class="cards mt-5">
       <% @skills.each do |skill| %>
           <a href="../skills/<%= skill.id%>" class='properlink'>
             <div class="card-trip">
