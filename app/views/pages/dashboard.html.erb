@@ -31,10 +31,11 @@
     <% @bookings.each do |booking| %>
     <div class="col">
       <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header">Booked from <%= booking.start_date.to_formatted_s(:short) %></div>
+        <div class="card-header">Booked <br> <%= booking.start_date.strftime("%d/%m/%Y") %> - <%= booking.end_date.strftime("%d/%m/%Y") %></div>
         <div class="card-body">
-          <h5 class="card-title"> <%= booking.skill.name %></h5>
+          <h5 class="card-title"> <strong><%= booking.skill.name %></strong></h5>
           <p class="card-text"> <%= booking.skill.description %></p>
+          <p class="card-text"> Total price: <%= (booking.end_date - booking.start_date)/(60*60*24).to_i * booking.skill.price %> €</p>
           <%= link_to "Delete booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this booking from your skills?"} %>
         </div>
       </div>
