@@ -15,7 +15,6 @@
   font-family: $card-font;
   font-size: 20px;
   text-transform: uppercase;
-  font-weight: bold;
   padding-bottom: 5px;
   margin: 0;
   border-radius: 5px;
@@ -42,7 +41,11 @@
   width: 40px;
 }
 
-.properlink {
+.cardlink {
   color: black;
   text-decoration: none;
+
+  :hover {
+    color: rgb(134, 5, 134);
+  }
 }
