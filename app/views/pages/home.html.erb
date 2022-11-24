@@ -1,22 +1,22 @@
 
-<div id="large-header" class="banner vh-75" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');">
+<div id="large-header" style="background-image: url('https://res.cloudinary.com/dul2z0iaw/image/upload/v1669301808/DALL_E_2022-11-24_15.45.36_-_surrealist_photograph_of_neurons_connecting_brains_in_a_galaxy_wide_open_space_r7vdmp.png');">
   <canvas id="demo-canvas"></canvas>
-  <div class="container">
-
-    <h1>The skills you need - instantly</h1>
-    <p>Change your life and use the skills that somebody else does not need.</p>
-    <%= form_with url: skills_path, method: :get, class: "search-box-home" do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "search-input",
-        placeholder: "Find a skill"
-      %>
-      <button class="search-btn">
-        <i class="fas fa-search"></i>
-      </button>
-    <% end %>
+  <div class="canvas-header">
+    <h1>Instant Skills</h1>
+    <p>mehr text</p>
   </div>
 </div>
+
+<%= form_with url: skills_path, method: :get, class: "search-box-home" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "search-input",
+    placeholder: "Find a skill"
+  %>
+  <button class="search-btn">
+    <i class="fas fa-search"></i>
+  </button>
+<% end %>
 
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>

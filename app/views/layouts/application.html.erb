@@ -16,7 +16,10 @@
     <%= render "components/navbar"%>
     <%= render "shared/flashes" %>
     <%= yield %>
-    <%= render "components/footer"%>
+
+    <% unless request.path == "/" %>
+      <%= render "components/footer"%>
+    <% end %>
   </div>
   </body>
 </html>
