@@ -11,7 +11,7 @@
 @import "components/index";
 @import "pages/index";
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap");
 @import "flatpickr/dist/flatpickr.css";
 
 .wrapper {
@@ -19,4 +19,9 @@
   justify-content: space-between;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.properlink {
+  text-decoration: none;
+  color: inherit;
 }
