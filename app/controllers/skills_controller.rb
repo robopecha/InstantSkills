@@ -2,7 +2,11 @@ class SkillsController < ApplicationController
   before_action :set_skill, only: %i[show edit update destroy]
 
   def index
-    @skills = Skill.where("user_id != ?", current_user.id)
+    if params[:query].present?
+      @skills = Skill.search_by_name_and_description(params[:query])
+    else
+      @skills = Skill.where("user_id != ?", current_user.id)
+    end
   end
 
   def new
