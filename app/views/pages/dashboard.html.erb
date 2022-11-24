@@ -25,25 +25,38 @@
   </div>
 
 
-
-  <h2 class="mt-5 mb-3">My bookings</h2>
+  <h2 class="mt-5 mb-3"><%= @bookings.size > 0 ? "My bookings" : "" %></h2>
   <div class="row row-cols-3 row-cols-md-4 g-4">
     <% @bookings.each do |booking| %>
     <div class="col">
-      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header">Booked <br> <%= booking.start_date.strftime("%d/%m/%Y") %> - <%= booking.end_date.strftime("%d/%m/%Y") %></div>
+      <div class="card text-white mb-3  <%= booking.status_confirmed? ? 'bg-primary' : 'bg-warning' %>" style="max-width: 18rem;">
+        <div class="card-header">Booking <%= booking.status.capitalize %> <br> <%= booking.start_date.strftime("%d/%m/%Y") %> - <%= booking.end_date.strftime("%d/%m/%Y") %></div>
         <div class="card-body">
           <h5 class="card-title"> <strong><%= booking.skill.name %></strong></h5>
           <p class="card-text"> <%= booking.skill.description %></p>
           <p class="card-text"> Total price: <%= (booking.end_date - booking.start_date)/(60*60*24).to_i * booking.skill.price %> €</p>
-          <%= link_to "Delete booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this booking from your skills?"} %>
+          <%= link_to "Delete booking", booking_path(booking), class: "text-white", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this booking from your skills?"} %>
         </div>
       </div>
     </div>
     <% end %>
   </div>
 
-
+  <h2 class="mt-5 mb-3"><%= @booked.size > 0 ? "My booked" : "" %></h2>
+  <div class="row row-cols-3 row-cols-md-4 g-4">
+    <% @booked.each do |book| %>
+    <div class="col">
+      <div class="card text-white mb-3 <%= book.status_confirmed? ? 'bg-primary' : 'bg-warning' %>" style="max-width: 18rem;">
+        <div class="card-header">Duration <br> <%= book.start_date.strftime("%d/%m/%Y") %> - <%= book.end_date.strftime("%d/%m/%Y") %></div>
+        <div class="card-body">
+          <h5 class="card-title"> <%= book.skill.name %></h5>
+          <p class="card-text"> <%= book.skill.description %></p>
+          <%= link_to "Confirm booking", confirm_booking_path(book), class: "text-white", data: { turbo_method: :put, turbo_confirm: "Are you sure you want to confirm this booking?"} %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
 
 
 
