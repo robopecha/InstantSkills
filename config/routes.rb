@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[new create]
   end
   resources :bookings, only: %i[index show destroy]
-
+  put "/bookings/:id/confirm", to: "bookings#confirm", as: 'confirm_booking'
 end
