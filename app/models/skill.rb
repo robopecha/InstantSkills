@@ -5,4 +5,5 @@ class Skill < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true, numericality: true
   validates :level, presence: true, numericality: { in: 1..5 }
+  has_one_attached :photo
 end
