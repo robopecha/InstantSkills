@@ -1,22 +1,23 @@
 .btn-ghost {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: white;
+  border: 1px solid white;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  // opacity: 0.6;
+  transition: all 0.3s ease;
 }
 
 .btn-ghost:hover {
-  opacity: 1;
+  // opacity: 1;
+  color: $orange_red;
 }
 
 .btn-flat {
   color: rgb(96, 95, 95);
   padding: 8px 24px;
   border-radius: 4px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   border: 1px solid $light-gray;
 }
 
@@ -30,12 +31,12 @@
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
-  transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
+  background: linear-gradient(#167ffb, #0f60c4);
+  transition: all 0.3s ease;
+  border: 1px solid #0f60c4;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
+  background: linear-gradient(#147eff, #0f67da);
   color: white;
 }
