@@ -27,7 +27,7 @@
                 <h2><%= "#{skill.name}" %></h2>
                 <p><%= "Level #{skill.level}" %></p>
               </div>
-              <h2 class="card-trip-pricing"><%= "#{skill.price}" %> €</h2>
+              <h2 class="card-trip-pricing"><%= "#{skill.price}" %> €/day</h2>
           </div>
         </div>
       </a>
@@ -35,7 +35,8 @@
   </div>
 
 
-  <% if @your_skills.present? %>
+  <% if @your_skills.length > 0 %>
+
     <div class="mt-5">
       <h3>Your offered skills</h3>
     </div>
@@ -49,11 +50,16 @@
                   <h2><%= "#{skill.name}" %></h2>
                   <p><%= "Level #{skill.level}" %></p>
                 </div>
-                <h2 class="card-trip-pricing"><%= "#{skill.price}" %> €</h2>
+                <h2 class="card-trip-pricing"><%= "#{skill.price}" %> €/day</h2>
             </div>
           </div>
         </a>
       <% end %>
+    </div>
+
+  <% else %>
+    <div class="mt-5">
+      <h3>Here could be your offered skills ... </h3>
     </div>
   <% end %>
 
