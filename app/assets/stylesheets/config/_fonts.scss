@@ -10,11 +10,8 @@ $body-font: "Anton", "Helvetica", "sans-serif";
 $headers-font: "Anton", "Helvetica", "sans-serif";
 $card-font: 'Anton', sans-serif;
 
-@font-face {
-  font-family: "LexendGiga-Regular";
-  src: font-url('LexendGiga-Regular.ttf') format('ttf')
-}
-$my-font: "LexendGiga-Regular";
+
+$my-font: "LexendGiga-Regular", "Anton", "Helvetica", "sans-serif";
 
 @font-face {
   font-family: "Monolith";
