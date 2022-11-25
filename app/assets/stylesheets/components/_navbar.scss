@@ -13,7 +13,6 @@
   width: 45px;
 }
 
-
 .display-6 {
   text-transform: uppercase;
   font-weight: bold;
@@ -30,4 +29,7 @@
 
 .nav-link:hover {
   color: $orange_red;
+
+.navbar-nav {
+  font-weight: bold;
 }

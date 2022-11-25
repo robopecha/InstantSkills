@@ -3,6 +3,7 @@
   <head>
     <title>InstantSkills</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://res.cloudinary.com/dul2z0iaw/image/upload/v1669372616/logo_3_black_qij4zt.png">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,14 +13,15 @@
 
 
   <body>
-  <div class="wrapper">
     <%= render "components/navbar"%>
+    <div class="wrapper">
+
     <%= render "shared/flashes" %>
     <%= yield %>
 
     <% unless request.path == "/" %>
       <%= render "components/footer"%>
     <% end %>
-  </div>
+    </div>
   </body>
 </html>
