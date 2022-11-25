@@ -4,8 +4,10 @@ class SkillsController < ApplicationController
   def index
     if params[:query].present?
       @skills = Skill.search_by_name_and_description(params[:query])
+      @your_skills = Skill.where("user_id = ?", current_user.id)
     else
       @skills = Skill.where("user_id != ?", current_user.id)
+      @your_skills = Skill.where("user_id = ?", current_user.id)
     end
   end
 

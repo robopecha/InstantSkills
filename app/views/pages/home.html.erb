@@ -1,23 +1,21 @@
-
-<div id="large-header" style="background-image: url('https://res.cloudinary.com/dul2z0iaw/image/upload/v1669319384/hard_light_sfmehq.jpg');">
-  <canvas id="demo-canvas"></canvas>
-  <div class="canvas-header">
-    <h1>Instant Skills</h1>
-    <p>mehr text</p>
+<div class="content">
+  <div id="large-header" class="large-header">
+    <canvas id="demo-canvas"></canvas>
+    <h1 class="main-title1">All the skills you need ...</h1>
+    <h1 class="main-title2">instantly!</h1>
+    <%= form_with url: skills_path, method: :get, class: "search-box-home" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Find a skill"
+      %>
+      <button class="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
+    <% end %>
   </div>
 </div>
 
-<%= form_with url: skills_path, method: :get, class: "search-box-home" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "search-input",
-    placeholder: "Find a skill"
-  %>
-  <button class="search-btn">
-    <i class="fas fa-search"></i>
-  </button>
-<% end %>
-
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script> %>

@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Delete all skills and user"
 
+Booking.delete_all
 Skill.destroy_all
 User.destroy_all
 
@@ -16,7 +17,7 @@ skills = [{name: "Coding",
            level: 2,
            img_url: "https://img.freepik.com/premium-photo/desktop-source-code-wallpaper-by-computer-language-with-coding-programming_33771-595.jpg"},
           {name: "Cook a Basic Italian Meal",
-           description: "First dive into the Italian cuisine",
+           description: "First dive into the Italian cuisine. Some Italian culinary traditions go back to the Roman Empire, became highly developed in Medieval and Renaissance Italy, and came to influence French cuisine. However, several of the ingredients stereotypically associated with Italian food, in particular tomatoes, originate in the Americas and did not reach Italy until the Italian Christopher Columbus sailed the ocean blue.",
            price: 10,
            level: 3,
            img_url: "https://www.eatthis.com/wp-content/uploads/sites/4/2022/08/italian-chef.jpg?quality=82&strip=1"},
@@ -74,7 +75,7 @@ skills = [{name: "Coding",
            description: "Managing personal finances is something hardly anyone is taught, either at school or by parents.",
            price: 15,
            level: 3,
-           img_url: "https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2022/02/2130x1130-01-01-1-min.png"},
+           img_url: "https://execed.esmt.berlin/sites/execed/files/styles/original/public/2021-08/Finance.JPG?itok=I7rSmMEe"},
           {name: "Karate",
             description: "Being able to karate like a black belt",
             price: 10,

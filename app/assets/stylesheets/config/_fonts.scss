@@ -1,10 +1,12 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital@0;1&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
-$card-font: 'Raleway Dots', sans-serif;
+$body-font: "Anton", "Helvetica", "sans-serif";
+$headers-font: "Anton", "Helvetica", "sans-serif";
+$card-font: 'Anton', sans-serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
