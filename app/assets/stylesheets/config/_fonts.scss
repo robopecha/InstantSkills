@@ -8,12 +8,14 @@ $body-font: "Anton", "Helvetica", "sans-serif";
 $headers-font: "Anton", "Helvetica", "sans-serif";
 $card-font: 'Anton', sans-serif;
 
-// To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+@font-face {
+  font-family: "Cuda";
+  src: font-url('Cuda.otf') format('otf')
+}
+$my-font: "Cuda";
+
+@font-face {
+  font-family: "Monolith";
+  src: font-url('Monolith.otf') format('otf')
+}
+$my2-font: "Monolith";
