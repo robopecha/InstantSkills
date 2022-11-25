@@ -1,11 +1,11 @@
-.img-gray-scale {
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
-}
+// .img-gray-scale {
+//   filter: gray; /* IE6-9 */
+//   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+//   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+// }
 
-/* Disable grayscale on hover */
-.img-gray-scale:hover {
-  -webkit-filter: grayscale(0);
-  filter: none;
-}
+// /* Disable grayscale on hover */
+// .img-gray-scale:hover {
+//   -webkit-filter: grayscale(0);
+//   filter: none;
+// }
