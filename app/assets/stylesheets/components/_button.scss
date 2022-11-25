@@ -17,11 +17,11 @@
   padding: 8px 24px;
   border-radius: 4px;
   transition: background 0.3s ease;
-  border: 1px solid #E7E7E7;
+  border: 1px solid $light-gray;
 }
 
 .btn-flat:hover {
-  background: rgb(142, 72, 142);
+  background: $orange_red;
   color: white;
 }
 

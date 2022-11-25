@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: center;
-  background: white;
+  background: $darker;
   display: flex;
   position: relative;
 }
@@ -21,6 +21,14 @@
   top: 9px;
   right: 42%;
 }
+
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: $orange_red;
 
 .navbar-nav {
   font-weight: bold;
