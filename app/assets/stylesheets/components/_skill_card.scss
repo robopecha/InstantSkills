@@ -1,12 +1,17 @@
 .skill-card {
-  width: 800px;
-  height: 100px;
+  width: 900px;
+  height: 150px;
   display: flex;
   position: relative;
+}
+
+.skill-info1 {
+  width: 700px;
 }
 
 .skill-info2 {
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 0;
+  font-size: 24px;
 }

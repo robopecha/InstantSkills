@@ -27,31 +27,37 @@
                 <h2><%= "#{skill.name}" %></h2>
                 <p><%= "Level #{skill.level}" %></p>
               </div>
-              <h2 class="card-trip-pricing"><%= "#{skill.price}" %> €</h2>
+              <h2 class="card-trip-pricing"><%= "#{skill.price}" %> €/day</h2>
           </div>
         </div>
       </a>
     <% end %>
   </div>
 
-  <div class="mt-5">
-    <h3>Your offered skills</h3>
-  </div>
-  <div class="cards mt-5">
-    <% @your_skills.each do |skill| %>
-      <a href="../skills/<%= skill.id%>" class='properlink'>
-        <div class="card-trip">
-          <img class="img-gray-scale" src=<%= skill.img_url ? skill.img_url : cl_image_path(skill.photo.key) %> />
-          <div class="card-trip-infos">
-              <div>
-                <h2><%= "#{skill.name}" %></h2>
-                <p><%= "Level #{skill.level}" %></p>
-              </div>
-              <h2 class="card-trip-pricing"><%= "#{skill.price}" %> €</h2>
+  <% if @your_skills.length > 0 %>
+    <div class="mt-5">
+      <h3>Your offered skills</h3>
+    </div>
+    <div class="cards mt-5">
+      <% @your_skills.each do |skill| %>
+        <a href="../skills/<%= skill.id%>" class='properlink'>
+          <div class="card-trip">
+            <img class="img-gray-scale" src=<%= skill.img_url ? skill.img_url : cl_image_path(skill.photo.key) %> />
+            <div class="card-trip-infos">
+                <div>
+                  <h2><%= "#{skill.name}" %></h2>
+                  <p><%= "Level #{skill.level}" %></p>
+                </div>
+                <h2 class="card-trip-pricing"><%= "#{skill.price}" %> €/day</h2>
+            </div>
           </div>
-        </div>
-      </a>
-    <% end %>
-  </div>
+        </a>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="mt-5">
+      <h3>Here could be your offered skills ... </h3>
+    </div>
+  <% end %>
 
 </div>
