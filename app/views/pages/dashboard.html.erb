@@ -4,15 +4,15 @@
   <div class="row row-cols-3 row-cols-md-4 g-4">
     <% @skills.each do |skill| %>
       <div class="col">
-        <div class="card" style="width: 18rem;">
+        <div class="card bg-black" style="width: 18rem;">
           <img src="<%= skill.img_url ? skill.img_url : cl_image_path(skill.photo.key) %>" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"> <%= skill.name %></h5>
-            <p class="card-text"><%= skill.description %></p>
+            <p class="card-text "><%= skill.description %></p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Level: <%= skill.level %></li>
-            <li class="list-group-item">Price: <%= skill.price %> €/day</li>
+            <li class="list-group-item  bg-black text-white">Level: <%= skill.level %></li>
+            <li class="list-group-item  bg-black text-white">Price: <%= skill.price %> €/day</li>
           </ul>
           <div class="card-body">
             <%= link_to "Edit my skill", edit_skill_path(skill), class: "card-link properlink" %>
@@ -23,6 +23,9 @@
 
     <% end %>
   </div>
+
+
+
 
 
 
