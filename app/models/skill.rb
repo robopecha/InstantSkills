@@ -14,5 +14,4 @@ class Skill < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-
 end
