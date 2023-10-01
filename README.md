@@ -4,6 +4,6 @@
 The App was build as a team project using
 - Ruby on Rails
 - PostgreSQL
-- HTML5, CSS3 and Boostrap
+- HTML5, CSS3 and Bootstrap
 
 Live Demo: [InstantSkills App](https://instantskills.herokuapp.com/)
